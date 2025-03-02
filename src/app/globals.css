@@ -127,3 +127,28 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Default (Light Mode) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --footer-bg: #f8f9fa;
+}
+
+/* Dark Mode */
+.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #ffffff;
+  --footer-bg: #111111;
+}
+
+/* Apply styles */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+footer {
+  background-color: var(--footer-bg);
+  color: var(--text-color);
+}
