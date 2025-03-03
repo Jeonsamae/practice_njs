@@ -1,14 +1,40 @@
 "use client";
+import { useState, useEffect } from "react";
 
 export default function Page() {
+  const [highlights, setHighlights] = useState<string[]>([]);
+
+  useEffect(() => {
+    // Load stored highlights from localStorage when the component mounts
+    const storedHighlights = localStorage.getItem("highlights");
+    if (storedHighlights) {
+      setHighlights(JSON.parse(storedHighlights));
+    }
+  }, []);
+
+  const handleTextSelection = () => {
+    const selectedText = window.getSelection()?.toString().trim();
+    if (selectedText && !highlights.includes(selectedText)) {
+      const newHighlights = [...highlights, selectedText];
+      setHighlights(newHighlights);
+      localStorage.setItem("highlights", JSON.stringify(newHighlights));
+    }
+  };
+
   return (
-    <div>
+    <div className="mt-15" onMouseUp={handleTextSelection}>
       {/* Animated Bouncing Ball */}
       <div className="w-[100px] h-[100px] bg-green-400 rounded-full animate-bounce"></div>
 
       {/* Page Content */}
-
       <article>
+        <h2>Highlighted Texts</h2>
+        <ul>
+          {highlights.map((text, index) => (
+            <li key={index} className="text-yellow-500">{text}</li>
+          ))}
+        </ul>
+
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam ac
           rhoncus quam.

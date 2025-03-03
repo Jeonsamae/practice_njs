@@ -14,7 +14,7 @@ export default function MainLayout({
       </header>
 
       {/* Main Content - Grow to Push Footer Down */}
-      <main className="flex-grow pt-[60px] p-4 mt-3 max-w-screen-2xl mx-auto w-full">
+      <main className="flex-grow pt-[60px] p-4 max-w-screen-2xl mx-auto w-full">
         {children}
       </main>
 
