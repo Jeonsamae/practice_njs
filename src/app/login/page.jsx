@@ -1,33 +1,42 @@
-import { useState } from "react";
-import axios from "axios";
+'use client'
 
-export default function Login() {
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+
+const Login = () => {
+  const [loginData, setLoginData] = useState({
+    emailOrUsername: '',
+    password: '',
   });
 
+
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setLoginData({ ...loginData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    try {
-      const res = await axios.post("http://127.0.0.1:8000/accounts/login/", formData);
-      alert(res.data.message);
-      localStorage.setItem("user", JSON.stringify(formData.username));
-    } catch (error) {
-      alert("Invalid credentials");
-    }
+    console.log('Login Data:', loginData);
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
-      <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
-      <button type="submit">Login</button>
-    </form>
+    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+      <Card className="w-full max-w-md">
+        <CardContent>
+          <h2 className="text-2xl font-bold mb-4">Log In</h2>
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <Input type="text" name="emailOrUsername" placeholder="Email or Username" value={loginData.emailOrUsername} onChange={handleChange} required />
+            <Input type="password" name="password" placeholder="Password" value={loginData.password} onChange={handleChange} required />
+            <Button type="submit" className="w-full">Log In</Button>
+          </form>
+          <p className="mt-4 text-center">Don't have an account? <Link href="/signup">Sign Up</Link></p>
+        </CardContent>
+      </Card>
+    </div>
   );
-}
+};
+
+export default Login;
