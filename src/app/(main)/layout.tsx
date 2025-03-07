@@ -13,10 +13,11 @@ export default function MainLayout({
         <Header />
       </header>
 
-      {/* Main Content - Grow to Push Footer Down */}
-      <main className="flex-grow pt-[60px] p-4 max-w-screen-2xl mx-auto w-full">
-        {children}
-      </main>
+        {/* Main Content Area */}
+        <main className="flex-grow pt-15 mx-auto w-full">
+          {children}
+        </main>
+
 
       {/* Footer - Always at the Bottom */}
       <footer className="mt-auto">
