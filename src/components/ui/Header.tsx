@@ -71,7 +71,7 @@ const Header = () => {
       ],
     },
     {
-      title: "2025 Lazaro-Javier Bar",
+      title: "Latest Cases",
       items: [
         { name: "Cases", href: "/cases" },
         { name: "Digest Compilations", href: "/compilations" },
@@ -133,16 +133,11 @@ const Header = () => {
             AI
           </Link>
 
-          {/* Pricing */}
-          <Link href="/pricing" className="hover:text-gray-300">
-            Pricing
-          </Link>
-
           {/* View (Theme & Settings) */}
           <div className="relative">
             <button
               onClick={() => setViewDropdown(!viewDropdown)}
-              className="bg-gray-700 text-white px-3 py-2 rounded-lg flex items-center hover:bg-gray-600 transition duration-200"
+              className="bg-gradient-to-br from-gray-700 to-blue-700 text-white px-3 py-2 rounded-lg flex items-center hover:bg-gray-600 transition duration-200"
             >
               <span className="mr-2">View</span>
               <FaCog />
