@@ -7,6 +7,7 @@ import {
   FaStickyNote,
   FaDownload,
   FaPrint,
+  FaEye,
 } from "react-icons/fa";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { BiSearch } from "react-icons/bi";
@@ -47,7 +48,7 @@ export default function CaseViewer() {
   };
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-full bg-gray-100">
       {/* Sidebar */}
       <div
         className={`bg-gradient-to-br from-gray-800 to-blue-800 text-white p-4 transition-all duration-500 ease-in-out shadow-lg
@@ -121,12 +122,38 @@ export default function CaseViewer() {
               }
             >
               <div className="flex items-center gap-3">
-                {" "}
-                <FaBook /> {isOpen && "Table of Contents"}{" "}
+                <FaBook /> {isOpen && "Table of Contents"}
               </div>
+
               {activeTab === "Table of Contents" && isOpen && (
-                <div className="bg-white text-black p-4 rounded-md mt-2">
-                  No content available.
+                <div className="bg-white/20 backdrop-blur-md text-lg text-white p-4 rounded-lg mt-4 shadow-lg transition-all duration-500 animate-fadeIn">
+                  {/* Internal Links */}
+                  <ul className="space-y-2">
+                    <li>
+                      <a
+                        href="#legal-basis"
+                        className="text-blue-300 underline hover:text-blue-500"
+                      >
+                        📜 Legal Basis
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#ruling"
+                        className="text-blue-300 underline hover:text-blue-500"
+                      >
+                        ⚖️ Ruling
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="#related-cases"
+                        className="text-blue-300 underline hover:text-blue-500"
+                      >
+                        🔗 Related Cases
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               )}
             </li>
@@ -157,7 +184,7 @@ export default function CaseViewer() {
       </div>
 
       {/* Main Content */}
-      <div className="flex-1 p-6 max-[640px]:p-3">
+      <div className="flex-1 p-6 max-[640px]:p-3 mt-5">
         {/* Header */}
         <div className="flex justify-between items-center mb-4">
           <div className="flex flex-wrap gap-2 sm:flex-nowrap">
@@ -172,6 +199,9 @@ export default function CaseViewer() {
               className="bg-gray-300 p-2 rounded flex items-center gap-2"
             >
               <FaPrint /> Print
+            </button>
+            <button className="bg-gray-300 p-2 rounded flex items-center gap-2">
+            <FaEye /> View Case Summary
             </button>
             <div className="relative flex items-center w-80">
               <input
@@ -191,12 +221,296 @@ export default function CaseViewer() {
         {/* Case Content */}
         <div className="bg-white p-6 rounded shadow">
           <h1 className="text-2xl font-bold">LANESTOSA VS. SANTAMARIA</h1>
-          <h2 className="text-xl font-bold">DECISION</h2>
-          <p className="mt-4">
-            This is a Mandamus proceeding instituted by Fausta Lanestosa and
-            Bernabe Lames... The lower court ordered the petitioners to appear
-            before it...
+          <p className="text-sm text-gray-500">
+            G.R. No. 30076 | September 13, 1928 | Ponente: VILLA-REAL, J.
           </p>
+
+          {/* Section 1 - Legal Basis */}
+          <h2 id="legal-basis" className="text-lg font-bold mt-6">
+            📜 Legal Basis
+          </h2>
+          <p className="mt-2 text-justify">
+            The court cited the ruling in{" "}
+            <a
+              href="https://lawphil.net/judjuris/juri1925/sep1925/gr_23456_1925.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Alfonso v. Court of Appeals (G.R. No. 23456)
+            </a>{" "}
+            and relied heavily on the precedent set by{" "}
+            <a
+              href="https://lawphil.net/judjuris/juri1926/jul1926/gr_21456_1926.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Reyes v. Santos (G.R. No. 21456)
+            </a>.
+          </p>
+          <p className="mt-2 text-justify">
+            The court cited the ruling in{" "}
+            <a
+              href="https://lawphil.net/judjuris/juri1925/sep1925/gr_23456_1925.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Alfonso v. Court of Appeals (G.R. No. 23456)
+            </a>{" "}
+            and relied heavily on the precedent set by{" "}
+            <a
+              href="https://lawphil.net/judjuris/juri1926/jul1926/gr_21456_1926.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Reyes v. Santos (G.R. No. 21456)
+            </a>.
+          </p>
+          <p className="mt-2 text-justify">
+            The court cited the ruling in{" "}
+            <a
+              href="https://lawphil.net/judjuris/juri1925/sep1925/gr_23456_1925.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Alfonso v. Court of Appeals (G.R. No. 23456)
+            </a>{" "}
+            and relied heavily on the precedent set by{" "}
+            <a
+              href="https://lawphil.net/judjuris/juri1926/jul1926/gr_21456_1926.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Reyes v. Santos (G.R. No. 21456)
+            </a>.
+          </p>
+          <p className="mt-2 text-justify">
+            The court cited the ruling in{" "}
+            <a
+              href="https://lawphil.net/judjuris/juri1925/sep1925/gr_23456_1925.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Alfonso v. Court of Appeals (G.R. No. 23456)
+            </a>{" "}
+            and relied heavily on the precedent set by{" "}
+            <a
+              href="https://lawphil.net/judjuris/juri1926/jul1926/gr_21456_1926.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline hover:text-blue-800"
+            >
+              Reyes v. Santos (G.R. No. 21456)
+            </a>.
+          </p>
+
+          {/* Section 2 - Ruling */}
+          <h2 id="ruling" className="text-lg font-bold mt-6">
+            ⚖️ Ruling
+          </h2>
+          <p className="mt-2 text-justify">
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
+            and reversed the decision of the lower court. The court emphasized the
+            importance of recognizing ownership through valid land titles.
+          </p>
+          <p className="mt-2 text-justify">
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
+            and reversed the decision of the lower court. The court emphasized the
+            importance of recognizing ownership through valid land titles.
+          </p>
+          <p className="mt-2 text-justify">
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
+            and reversed the decision of the lower court. The court emphasized the
+            importance of recognizing ownership through valid land titles.
+          </p>
+          <p className="mt-2 text-justify">
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
+            and reversed the decision of the lower court. The court emphasized the
+            importance of recognizing ownership through valid land titles.
+          </p>
+          <p className="mt-2 text-justify">
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
+            and reversed the decision of the lower court. The court emphasized the
+            importance of recognizing ownership through valid land titles.
+          </p>
+          <p className="mt-2 text-justify">
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
+            and reversed the decision of the lower court. The court emphasized the
+            importance of recognizing ownership through valid land titles.
+          </p>
+          <p className="mt-2 text-justify">
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
+            and reversed the decision of the lower court. The court emphasized the
+            importance of recognizing ownership through valid land titles.
+          </p>
+          <p className="mt-2 text-justify">
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
+            and reversed the decision of the lower court. The court emphasized the
+            importance of recognizing ownership through valid land titles.
+          </p>
+          <p className="mt-2 text-justify">
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
+            and reversed the decision of the lower court. The court emphasized the
+            importance of recognizing ownership through valid land titles.
+          </p>
+          <p className="mt-2 text-justify">
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
+            and reversed the decision of the lower court. The court emphasized the
+            importance of recognizing ownership through valid land titles.
+          </p>
+
+          {/* Section 3 - Related Cases */}
+          <h2 id="related-cases" className="text-lg font-bold mt-6">
+            🔗 Related Cases
+          </h2>
+          <ul className="list-disc list-inside mt-2 space-y-2">
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1930/jan1930/gr_32056_1930.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                People v. Sia (G.R. No. 32056, January 1930)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1931/mar1931/gr_33123_1931.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                Ramos v. Sandiganbayan (G.R. No. 33123, March 1931)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1930/jan1930/gr_32056_1930.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                People v. Sia (G.R. No. 32056, January 1930)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1931/mar1931/gr_33123_1931.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                Ramos v. Sandiganbayan (G.R. No. 33123, March 1931)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1930/jan1930/gr_32056_1930.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                People v. Sia (G.R. No. 32056, January 1930)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1931/mar1931/gr_33123_1931.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                Ramos v. Sandiganbayan (G.R. No. 33123, March 1931)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1930/jan1930/gr_32056_1930.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                People v. Sia (G.R. No. 32056, January 1930)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1931/mar1931/gr_33123_1931.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                Ramos v. Sandiganbayan (G.R. No. 33123, March 1931)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1930/jan1930/gr_32056_1930.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                People v. Sia (G.R. No. 32056, January 1930)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1931/mar1931/gr_33123_1931.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                Ramos v. Sandiganbayan (G.R. No. 33123, March 1931)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1930/jan1930/gr_32056_1930.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                People v. Sia (G.R. No. 32056, January 1930)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1931/mar1931/gr_33123_1931.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                Ramos v. Sandiganbayan (G.R. No. 33123, March 1931)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1930/jan1930/gr_32056_1930.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                People v. Sia (G.R. No. 32056, January 1930)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://lawphil.net/judjuris/juri1931/mar1931/gr_33123_1931.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline hover:text-blue-800"
+              >
+                Ramos v. Sandiganbayan (G.R. No. 33123, March 1931)
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
