@@ -201,7 +201,7 @@ export default function CaseViewer() {
               <FaPrint /> Print
             </button>
             <button className="bg-gray-300 p-2 rounded flex items-center gap-2">
-            <FaEye /> View Case Summary
+              <FaEye /> View Case Summary
             </button>
             <div className="relative flex items-center w-80">
               <input
@@ -247,7 +247,8 @@ export default function CaseViewer() {
               className="text-blue-600 underline hover:text-blue-800"
             >
               Reyes v. Santos (G.R. No. 21456)
-            </a>.
+            </a>
+            .
           </p>
           <p className="mt-2 text-justify">
             The court cited the ruling in{" "}
@@ -267,47 +268,8 @@ export default function CaseViewer() {
               className="text-blue-600 underline hover:text-blue-800"
             >
               Reyes v. Santos (G.R. No. 21456)
-            </a>.
-          </p>
-          <p className="mt-2 text-justify">
-            The court cited the ruling in{" "}
-            <a
-              href="https://lawphil.net/judjuris/juri1925/sep1925/gr_23456_1925.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline hover:text-blue-800"
-            >
-              Alfonso v. Court of Appeals (G.R. No. 23456)
-            </a>{" "}
-            and relied heavily on the precedent set by{" "}
-            <a
-              href="https://lawphil.net/judjuris/juri1926/jul1926/gr_21456_1926.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline hover:text-blue-800"
-            >
-              Reyes v. Santos (G.R. No. 21456)
-            </a>.
-          </p>
-          <p className="mt-2 text-justify">
-            The court cited the ruling in{" "}
-            <a
-              href="https://lawphil.net/judjuris/juri1925/sep1925/gr_23456_1925.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline hover:text-blue-800"
-            >
-              Alfonso v. Court of Appeals (G.R. No. 23456)
-            </a>{" "}
-            and relied heavily on the precedent set by{" "}
-            <a
-              href="https://lawphil.net/judjuris/juri1926/jul1926/gr_21456_1926.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-600 underline hover:text-blue-800"
-            >
-              Reyes v. Santos (G.R. No. 21456)
-            </a>.
+            </a>
+            .
           </p>
 
           {/* Section 2 - Ruling */}
@@ -315,54 +277,58 @@ export default function CaseViewer() {
             ⚖️ Ruling
           </h2>
           <p className="mt-2 text-justify">
-            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
-            and reversed the decision of the lower court. The court emphasized the
-            importance of recognizing ownership through valid land titles.
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and
+            Lames) and reversed the decision of the lower court. The court
+            emphasized the importance of recognizing ownership through valid
+            land titles.
           </p>
           <p className="mt-2 text-justify">
-            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
-            and reversed the decision of the lower court. The court emphasized the
-            importance of recognizing ownership through valid land titles.
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and
+            Lames) and reversed the decision of the lower court. The court
+            emphasized the importance of recognizing ownership through valid
+            land titles.
           </p>
           <p className="mt-2 text-justify">
-            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
-            and reversed the decision of the lower court. The court emphasized the
-            importance of recognizing ownership through valid land titles.
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and
+            Lames) and reversed the decision of the lower court. The court
+            emphasized the importance of recognizing ownership through valid
+            land titles.
           </p>
           <p className="mt-2 text-justify">
-            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
-            and reversed the decision of the lower court. The court emphasized the
-            importance of recognizing ownership through valid land titles.
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and
+            Lames) and reversed the decision of the lower court. The court
+            emphasized the importance of recognizing ownership through valid
+            land titles.
           </p>
           <p className="mt-2 text-justify">
-            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
-            and reversed the decision of the lower court. The court emphasized the
-            importance of recognizing ownership through valid land titles.
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and
+            Lames) and reversed the decision of the lower court. The court
+            emphasized the importance of recognizing ownership through valid
+            land titles.
           </p>
           <p className="mt-2 text-justify">
-            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
-            and reversed the decision of the lower court. The court emphasized the
-            importance of recognizing ownership through valid land titles.
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and
+            Lames) and reversed the decision of the lower court. The court
+            emphasized the importance of recognizing ownership through valid
+            land titles.
           </p>
           <p className="mt-2 text-justify">
-            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
-            and reversed the decision of the lower court. The court emphasized the
-            importance of recognizing ownership through valid land titles.
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and
+            Lames) and reversed the decision of the lower court. The court
+            emphasized the importance of recognizing ownership through valid
+            land titles.
           </p>
           <p className="mt-2 text-justify">
-            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
-            and reversed the decision of the lower court. The court emphasized the
-            importance of recognizing ownership through valid land titles.
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and
+            Lames) and reversed the decision of the lower court. The court
+            emphasized the importance of recognizing ownership through valid
+            land titles.
           </p>
           <p className="mt-2 text-justify">
-            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
-            and reversed the decision of the lower court. The court emphasized the
-            importance of recognizing ownership through valid land titles.
-          </p>
-          <p className="mt-2 text-justify">
-            The Supreme Court ruled in favor of the petitioners (Lanestosa and Lames)
-            and reversed the decision of the lower court. The court emphasized the
-            importance of recognizing ownership through valid land titles.
+            The Supreme Court ruled in favor of the petitioners (Lanestosa and
+            Lames) and reversed the decision of the lower court. The court
+            emphasized the importance of recognizing ownership through valid
+            land titles.
           </p>
 
           {/* Section 3 - Related Cases */}
@@ -370,26 +336,6 @@ export default function CaseViewer() {
             🔗 Related Cases
           </h2>
           <ul className="list-disc list-inside mt-2 space-y-2">
-            <li>
-              <a
-                href="https://lawphil.net/judjuris/juri1930/jan1930/gr_32056_1930.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline hover:text-blue-800"
-              >
-                People v. Sia (G.R. No. 32056, January 1930)
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://lawphil.net/judjuris/juri1931/mar1931/gr_33123_1931.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline hover:text-blue-800"
-              >
-                Ramos v. Sandiganbayan (G.R. No. 33123, March 1931)
-              </a>
-            </li>
             <li>
               <a
                 href="https://lawphil.net/judjuris/juri1930/jan1930/gr_32056_1930.html"
