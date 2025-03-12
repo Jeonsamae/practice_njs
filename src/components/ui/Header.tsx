@@ -129,7 +129,7 @@ const Header = () => {
           ))}
 
           {/* AI Page */}
-          <Link href="/ai" className="hover:text-gray-300">
+          <Link href="/ai" className="bg-gradient-to-br from-gray-700 to-blue-700 text-white px-4 py-1 rounded-lg flex items-center hover:bg-gray-600 transition duration-200">
             AI
           </Link>
 
@@ -139,7 +139,6 @@ const Header = () => {
               onClick={() => setViewDropdown(!viewDropdown)}
               className="bg-gradient-to-br from-gray-700 to-blue-700 text-white px-3 py-2 rounded-lg flex items-center hover:bg-gray-600 transition duration-200"
             >
-              <span className="mr-2">View</span>
               <FaCog />
             </button>
 
